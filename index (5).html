@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Course Portal</title>
+
+  <!-- Optional font. If you are offline, the page still works with a fallback font. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER + NAVIGATION ========== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Online Course Portal</a>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#details">Course Details</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HOME / HERO ========== -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Online Course Portal</h1>
+        <p>Pick a course, learn at your own pace, and pick up a new skill today.</p>
+        <a href="#courses" class="btn btn-primary">Browse courses</a>
+      </div>
+    </section>
+
+    <!-- ========== COURSES + SEARCH ========== -->
+    <section id="courses" class="section">
+      <div class="container">
+        <h2>Our courses</h2>
+
+        <label for="search" class="visually-hidden">Search courses</label>
+        <input
+          type="text"
+          id="search"
+          class="search-box"
+          placeholder="Search by course name or instructor"
+        >
+
+        <div id="course-list" class="course-grid">
+          <!-- Course cards are added here by script.js -->
+        </div>
+
+        <p id="no-results" class="no-results" hidden>
+          No courses found. Try a different word, like "python" or "design".
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== COURSE DETAILS ========== -->
+    <section id="details" class="section section-soft">
+      <div class="container">
+        <h2>Course details</h2>
+        <div id="details-box" class="details-box">
+          <!-- Details are added here by script.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Online Course Portal - built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <!-- Message shown after enrolling -->
+  <div id="message" class="message" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
